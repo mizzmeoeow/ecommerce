@@ -12,9 +12,11 @@ const INITIAL_STATE = {
   navbarLinks: [
     {
       title: "account",
+      active: true,
     },
     {
       title: "purchases",
+      active: false,
     },
   ],
 };
@@ -29,7 +31,7 @@ export default function (state = INITIAL_STATE, action) {
     case SET_NAVBAR_LINKS:
       return {
         ...state,
-        navbarLinks: action.payload,
+        navbarLinks: links,
       };
 
     default:
