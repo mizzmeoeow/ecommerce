@@ -1,8 +1,8 @@
-import actions from "redux-form/lib/actions";
-import { SET_USER_PURCHASES } from "../actions/types";
+import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL } from "../actions/types";
 
 const INITIAL_STATE = {
   purchases: [],
+  purchaseDetail: {},
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -11,6 +11,18 @@ export default function (state = INITIAL_STATE, action) {
       return {
         ...state,
         purchases: action.payload,
+      };
+
+    case SET_PURCHASE_DETAIL:
+      let purchaseDetail;
+      state.purchases.map((purchase) => {
+        if ((purchase._id = action.payload)) {
+          purchaseDetail = purchase;
+        }
+      });
+      return {
+        ...state,
+        purchaseDetail,
       };
 
     default:
