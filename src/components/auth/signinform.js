@@ -3,13 +3,13 @@ import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 
 import { FormInput, FormButton } from "../formFields";
+import Details from "../details";
 
 import history from "../../history";
 
-class AccountInformationForm extends Component {
+class SignInForm extends Component {
   render() {
     const { className, handleSubmit } = this.props;
-
     return (
       <form onSubmit={handleSubmit} className={`${className} sign-in-form`}>
         <Field
@@ -37,13 +37,18 @@ class AccountInformationForm extends Component {
           name="Login"
           component={FormButton}
         />
+        <Details
+          className="sign-in-form__details"
+          title="QuickLinks"
+          links={links}
+        />
       </form>
     );
   }
 }
 
-AccountInformationForm = reduxForm({
-  form: "AccountInformationForm",
-})(AccountInformationForm);
+SignInForm = reduxForm({
+  form: "SignInForm",
+})(SignInForm);
 
-export default AccountInformationForm;
+export default SignInForm;
