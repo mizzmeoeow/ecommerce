@@ -33,9 +33,11 @@ body {
 
 // Shop
 @import "shop/shop";
-@import "shop/shop-cart";
 @import "shop/shop-search-bar";
 @import "shop/shop-product";
+
+// cart
+@import "shop/shop-cart";
 
 // Quantity
 @import "quantity";
