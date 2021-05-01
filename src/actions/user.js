@@ -17,7 +17,7 @@ export function fetchCartProducts() {
     payload: [
       {
         _id: 0,
-        products: {
+        product: {
           _id: 0,
           title: "JavaScript in the Browser",
           description:
