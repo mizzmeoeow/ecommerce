@@ -43,12 +43,13 @@
     color: #333;
     font-size: 18px;
     font-family: "Titillium Web";
-    // text-align: center;
+    text-align: center;
+    font-weight: 600;
   }
 }
 
 .shop-product__back {
-  height: 230px;
+  height: 270px;
   width: 240px;
   background-color: white;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
@@ -69,6 +70,7 @@
     font-family: "Encode Sans Condensed";
     font-size: 16px;
     font-weight: 500;
+    margin-top: 10px;
   }
 
   &__desription {

@@ -7,13 +7,14 @@ import ShopProduct from "./shopProduct";
 import ShopCart from "./shopCart";
 
 class Shop extends Component {
-  // constructor() {
-  //   super();
+  constructor() {
+    super();
 
-  //   this.state = {
-  //     showCart: true,
-  //   };
-  // }
+    this.state = {
+      showCart: true,
+    };
+  }
+
   componentDidMount() {
     const headerLinks = [
       {
@@ -49,9 +50,9 @@ class Shop extends Component {
           {this.props.filteredProducts.map((product) => {
             return <ShopProduct {...product} key={product._id} />;
           })}
-          <ShopCart className="shop__cart" />
+          {/*  */}
         </div>
-        {/* {this.state.showCart ?  : ""} */}
+        {this.state.showCart ? <ShopCart className="shop__cart" /> : ""}
       </div>
     );
   }
