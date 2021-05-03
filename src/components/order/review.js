@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import * as actions from "../../actions";
 
 import PageTitle from "../pageTitle";
-import ReviewForm from "./reviewFrom";
+import ReviewForm from "./reviewForm";
 
 class Review extends Component {
   componentDidMount() {
